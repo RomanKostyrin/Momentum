@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="player">
+        <audio src="./assets/sounds/River Flows In You.mp3" class="audio"></audio>
+        <div class="progress-container">
+          <p class="progress-duration"><span class="progress-current-time">0</span>/<span class="progress-full-time">0</span></p>
+          <h2 class="progress-title">Song name</h2>
+
+          <input type="range" min="0" max="1" step="0.002" value="0" class="progress-bar" />
+          <div class="progress-wrapper">
+            <button class="control__volume"></button>
+            <input type="range" value="0.6" min="0" max="1" step="0.01" class="progress__volume" />
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+      <div class="menu">
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label class="menu-up" for="checkbox">Меню</label>
+        <ul class="navigation">
+          <li class="navigation__item">
+            <p class="text text--language">Язык</p>
+            <select class="language" name="language">
+              <option value="ru">RU</option>
+              <option value="en">EN</option>
+            </select>
+          </li>
+          <li class="navigation__item">
+            <p class="text text--hide">Спрятать элемент</p>
+            <select class="hide-element" name="hide-element">
+              <option value="time">time</option>
+              <option value="date">date</option>
+              <option value="greeting-container">greeting</option>
+              <option value="quote-container">quote</option>
+              <option value="weather">weather</option>
+              <option value="player">audio</option>
+              <option value="todolist">todolist</option>
+            </select>
+            <button class="button--hide">Вк/Вык</button>
+          </li>
+          <li class="navigation__item">
+            <p class="text text--pictures">Источник картинок</p>
+            <select class="picture-resourse" name="picture-resourse">
+              <option value="github">Github</option>
+              <option value="unsplash">Unsplash</option>
+              <option value="flickr">Flickr</option>
+            </select>
+            <button class="button--pictures">Ok</button>
+          </li>
+          <li class="navigation__item">
+            <p class="text text--theme">Тема картинок</p>
+            <select class="picture-theme" name="picture-resourse">
+              <option value="nature">nature</option>
+              <option value="building">building</option>
+            </select>
+            <!-- <button class="button--theme">Ok</button> -->
+          </li>
+        </ul>
+      </div>
+      <div class="weather">
+        <input type="text" class="city" value="Minsk" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="[Enter name]" />
+      </div>
+      <div class="todolist">
+        <p class="text text--todo">Todo List:</p>
+        <div class="todolist__wrapper"></div>
+        <button class="button--todo">+</button>
+        <ul class="list">
+          <li class="list__item"></li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="change-quote"></button>
+      <div class="quote-container">
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </footer>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
